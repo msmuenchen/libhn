@@ -1,0 +1,5 @@
+libhn itself is licensed under the terms of GPL v2 or later.
+
+Embedded components:
+* DOMDocumentCharset.php from https://github.com/glenscott/dom-document-charset - no license mentioned at all
+* xmltree_dump_includes.php from https://gist.github.com/hakre/1519893 - no license mentioned at all
