@@ -1,0 +1,4 @@
+<?
+$cont=(isset($_GET["continuation"]))?$_GET["continuation"]:"";
+$hn=new HN();
+$ret["news"]=$hn->getNews($cont);

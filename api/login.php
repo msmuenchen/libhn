@@ -1,0 +1,10 @@
+<?
+if(!isset($_GET["username"]) || $_GET["username"]=="")
+ throw new APIWrongCallException("Kein Benutzername angegeben");
+if(!isset($_GET["password"]) || $_GET["password"]=="")
+ throw new APIWrongCallException("Kein Passwort angegeben");
+
+$user=$_GET["username"];
+$pass=$_GET["password"];
+
+$ret["result"]=$hn->login($user,$pass);
