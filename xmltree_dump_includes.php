@@ -105,7 +105,13 @@ class DOMRecursiveDecoratorStringAsCurrent extends RecursiveIteratorDecoratorStu
 		switch($nodeType)
 		{
 			case XML_ELEMENT_NODE:
-				return "<$node->tagName>";
+				$s="<".$node->tagName;
+				if($node->hasAttributes()) {
+					foreach($node->attributes as $attr)
+						$s.=" ".$attr->nodeName."=\"".$attr->nodeValue."\"";
+				}
+				$s.=">";
+				return $s;
 
 			case XML_TEXT_NODE:
 				return $node->nodeValue;
